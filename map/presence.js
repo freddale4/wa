@@ -32,7 +32,7 @@ WA.onInit().then(() => {
     });
     
     WA.room.onLeaveLayer(LAYER_NAME).subscribe(() => {
-      sendEvent("ENTER", LAYER_NAME);
+      sendEvent("LEAVE", LAYER_NAME);
       myLayerSubscriber.unsubscribe();
     });
 });
