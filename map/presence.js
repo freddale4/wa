@@ -25,7 +25,7 @@ async function sendEvent(eventType, zoneName) {
 
 WA.onInit().then(() => {
 
-    const LAYER_NAME = "start"; // aqui é o NAME, não ID
+    const LAYER_NAME = "TRABALHO"; // aqui é o NAME, não ID
 
     const myLayerSubscriber = WA.room.onEnterLayer(LAYER_NAME).subscribe(() => {
       sendEvent("ENTER", LAYER_NAME);
