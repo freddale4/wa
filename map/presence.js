@@ -45,16 +45,15 @@ async function sendEvent(eventType, zoneName) {
 
 WA.onInit().then(() => {
 
-    const ZONE_NAME = "start"; // aqui é o NAME, não ID
+    const LAYER_NAME = "start"; // aqui é o NAME, não ID
 
-    WA.room.onEnterLayer(ZONE_NAME, () => {
-        console.log("ENTER ZONE:", ZONE_NAME);
-        sendEvent("ENTER", ZONE_NAME);
+    const myLayerSubscriber = WA.room.onEnterLayer(LAYER_NAME).subscribe(() => {
+      sendEvent("ENTER", LAYER_NAME);
     });
-
-    WA.room.onEnterLayer(ZONE_NAME, () => {
-        console.log("LEAVE ZONE:", ZONE_NAME);
-        sendEvent("LEAVE", ZONE_NAME);
+    
+    WA.room.onLeaveLayer(LAYER_NAME).subscribe(() => {
+      sendEvent("ENTER", LAYER_NAME);
+      myLayerSubscriber.unsubscribe();
     });
 });
 
