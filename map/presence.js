@@ -45,13 +45,16 @@ async function sendEvent(eventType, zoneName) {
 
 WA.onInit().then(() => {
 
-    WA.ui.registerMenuCommand("Iniciar Trabalho", () => {
-        sendEvent("ENTER", "TRABALHO");
+    const ZONE_NAME = "TRABALHO"; // aqui é o NAME, não ID
+
+    WA.onEnterZone(ZONE_NAME, () => {
+        console.log("ENTER ZONE:", ZONE_NAME);
+        sendEvent("ENTER", ZONE_NAME);
     });
 
-    WA.ui.registerMenuCommand("Encerrar Trabalho", () => {
-        sendEvent("LEAVE", "TRABALHO");
+    WA.onLeaveZone(ZONE_NAME, () => {
+        console.log("LEAVE ZONE:", ZONE_NAME);
+        sendEvent("LEAVE", ZONE_NAME);
     });
-
 });
 
