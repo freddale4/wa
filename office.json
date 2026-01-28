@@ -1,8 +1,12 @@
 { "compressionlevel":-1,
  "height":21,
- "scripting": {
-    "script": "map/presence.js"
-  },
+ "properties": [
+   {
+     "name": "script",
+     "type": "string",
+     "value": "map/presence.js"
+   }
+ ],
  "infinite":false,
  "layers":[
         {
