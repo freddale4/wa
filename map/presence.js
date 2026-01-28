@@ -39,13 +39,13 @@ WA.onInit().then(() => {
 
     console.log("WA - onInit - CARREGADO!!!");
     
-    const ZONE_NAME = "TRABALHO";
+    const AREA_NAME = "TRABALHO";
 
-    WA.room.onEnterZone(ZONE_NAME, () => {
-        sendEvent("ENTER", ZONE_NAME);
+    WA.room.onEnterArea(AREA_NAME, () => {
+        sendEvent("ENTER", AREA_NAME);
     });
 
-    WA.room.onLeaveZone(ZONE_NAME, () => {
-        sendEvent("LEAVE", ZONE_NAME);
+    WA.room.onLeaveArea(AREA_NAME, () => {
+        sendEvent("LEAVE", AREA_NAME);
     });
 });
