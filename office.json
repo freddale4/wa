@@ -336,6 +336,22 @@
                  "x":483.919325398621,
                  "y":14.0269116471316
                 }, 
+
+                {
+                 "id": 15,
+                 "name": "TRABALHO",
+                 "x": 320,
+                 "y": 128,
+                 "width": 256,
+                 "height": 192,
+                 "properties": [
+                   {
+                     "name": "type",
+                     "type": "string",
+                     "value": "area"
+                   }
+                 ]
+               },
                 {
                  "height":128,
                  "id":13,
