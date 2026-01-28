@@ -45,22 +45,13 @@ async function sendEvent(eventType, zoneName) {
 
 WA.onInit().then(() => {
 
-    console.log("WA onInit OK — usando onMove");
-
-    WA.player.onMove((pos) => {
-
-        const nowInside = isInsideArea(pos, TRABALHO_AREA);
-
-        if (nowInside && !inside) {
-            inside = true;
-            console.log("ENTER TRABALHO");
-            sendEvent("ENTER", TRABALHO_AREA.name);
-        }
-
-        if (!nowInside && inside) {
-            inside = false;
-            console.log("LEAVE TRABALHO");
-            sendEvent("LEAVE", TRABALHO_AREA.name);
-        }
+    WA.ui.registerMenuCommand("Iniciar Trabalho", () => {
+        sendEvent("ENTER", "TRABALHO");
     });
+
+    WA.ui.registerMenuCommand("Encerrar Trabalho", () => {
+        sendEvent("LEAVE", "TRABALHO");
+    });
+
 });
+
