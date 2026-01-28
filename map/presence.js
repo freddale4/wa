@@ -4,26 +4,6 @@ const POWER_AUTOMATE_URL = "https://prod-19.northcentralus.logic.azure.com:443/w
 
 console.log("presence.js carregado");
 
-// 📐 Área TRABALHO (WAM)
-const TRABALHO_AREA = {
-    name: "TRABALHO",
-    x: 33,
-    y: 82,
-    width: 950,
-    height: 497
-};
-
-let inside = false;
-
-function isInsideArea(pos, area) {
-    return (
-        pos.x >= area.x &&
-        pos.x <= area.x + area.width &&
-        pos.y >= area.y &&
-        pos.y <= area.y + area.height
-    );
-}
-
 async function sendEvent(eventType, zoneName) {
     const player = WA.player;
 
