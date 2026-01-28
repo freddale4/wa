@@ -543,17 +543,7 @@
          "visible":true,
          "x":0,
          "y":0
-        },
-        {
-                     "id": 58,
-                     "x": 33,
-                     "y": 82,
-                     "width": 950,
-                     "height": 497,
-                     "name": "TRABALHO",
-                     "type": "tilelayer",
-                     "visible": true
-              }],
+        }],
  "nextlayerid":63,
  "nextobjectid":20,
  "orientation":"orthogonal",
