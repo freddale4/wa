@@ -47,12 +47,12 @@ WA.onInit().then(() => {
 
     const ZONE_NAME = "TRABALHO"; // aqui é o NAME, não ID
 
-    WA.onEnterZone(ZONE_NAME, () => {
+    WA.room.onEnterZone(ZONE_NAME, () => {
         console.log("ENTER ZONE:", ZONE_NAME);
         sendEvent("ENTER", ZONE_NAME);
     });
 
-    WA.onLeaveZone(ZONE_NAME, () => {
+    WA.room.onLeaveZone(ZONE_NAME, () => {
         console.log("LEAVE ZONE:", ZONE_NAME);
         sendEvent("LEAVE", ZONE_NAME);
     });
