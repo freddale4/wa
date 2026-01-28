@@ -1,12 +1,5 @@
 { "compressionlevel":-1,
  "height":21,
- "properties": [
-   {
-     "name": "script",
-     "type": "string",
-     "value": "map/presence.js"
-   }
- ],
  "infinite":false,
  "layers":[
         {
@@ -553,6 +546,11 @@
  "nextobjectid":20,
  "orientation":"orthogonal",
  "properties":[
+       {
+          "name": "script",
+          "type": "string",
+          "value": "map/presence.js"
+        },
         {
          "name":"mapCopyright",
          "type":"string",
