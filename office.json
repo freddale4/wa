@@ -338,12 +338,12 @@
                 }, 
 
                 {
-                 "id": 15,
-                 "name": "TRABALHO",
-                 "x": 320,
-                 "y": 128,
-                 "width": 256,
-                 "height": 192,
+                 "id": "7885b63c-00eb-498b-a5da-e02904be36e4",
+                 "x": 33,
+                 "y": 82,
+                 "width": 950,
+                 "height": 497,                 
+                 "name": "TRABALHO",               
                  "properties": [
                    {
                      "name": "type",
