@@ -36,6 +36,9 @@ async function sendEvent(eventType, zoneName) {
 }
 
 WA.onInit().then(() => {
+
+    console.log("WA - onInit - CARREGADO!!!");
+    
     const ZONE_NAME = "TRABALHO";
 
     WA.room.onEnterZone(ZONE_NAME, () => {
